@@ -68,9 +68,9 @@ const sessionOption = {
     },
 };
 
-// app.get("/",(req,res) => {
-//     res.send("Listing");
-// });
+app.get("/",(req,res) => {
+    res.send("Listing");
+});
 
 
 
@@ -91,28 +91,15 @@ app.use((req,res,next) => {
     next();
 });
 
-// app.get("/demouser",async(req,res) => {
-//     let fakeUser = new User({
-//         email: "student@gmail.com",
-//         username: "delta-student",
-//     });
 
-//     let registedUser = await User.register(fakeUser,"helloworld");
-//     res.send(registedUser);
-// })
 
 
 
 
 app.use("/listing",listingsRouter);
 app.use("/listing/:id/reviews",reviewsRouter);
-app.use("/",usersRouter);
+app.use("/listing",usersRouter);
 
-
-
-// app.all("*", (req,res,next) => {
-//     next(ExpressError(404,"Page not Found"));
-// });
 
 app.use((err,req,res,next) => {
     let {statusCode=500,message="Something went wrong!"} = err;

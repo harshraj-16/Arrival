@@ -68,9 +68,9 @@ const sessionOption = {
     },
 };
 
-app.get("/",(req,res) => {
-    res.send("Listing");
-});
+// app.get("/",(req,res) => {
+//     res.send("Listing");
+// });
 
 
 

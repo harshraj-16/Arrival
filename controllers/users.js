@@ -33,7 +33,7 @@ module.exports.renderLoginForm = (req,res) => {
 }
 
 module.exports.login = async(req,res) => {
-    req.flash("success","Welcome back to Hello");
+    req.flash("success","Welcome back to Arrival");
     let redirectUrl = res.locals.redirectUrl || "/listing";
     res.redirect(redirectUrl);
 }
